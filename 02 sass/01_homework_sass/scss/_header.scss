@@ -1,0 +1,21 @@
+//
+//	SITE HEADER
+// ------------------------------------------------------
+
+.site-header {
+	background: #fff;
+}
+
+nav {
+	a {
+		color: $color-muted;
+
+		font-size: em(13);
+		padding: em(24, 13) em(8, 13);
+
+		&:hover,
+		&:focus {
+			color: lighten( $color-muted, 15% );
+		}
+	}
+}

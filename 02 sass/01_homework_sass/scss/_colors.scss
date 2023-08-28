@@ -1,0 +1,19 @@
+//
+//	COLORS
+// ------------------------------------------------------
+
+@each $page, $color, $darken in $page-colors {
+  .#{$page} {
+    main {
+      //prefix in mixin not needed
+      background: linear-gradient(45deg, $color, lighten($color, 18%));
+      border-top: 1px solid darken($color, $darken);
+    }
+    .shadow {
+      text-shadow: -1px 1px 0px darken($color, calc($darken - 3));
+    }
+    .active a {
+      color: darken($color, calc($darken + 5));
+    }
+  }
+}

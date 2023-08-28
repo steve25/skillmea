@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  line-height: 22px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+header {
+  padding: 50px 0;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+  border-bottom: 1px solid rgb(188, 188, 188);
+}
+
+main {
+  background-color: rgba(243, 246, 236, 0.704);
+  width: 100%;
+}
+
+.image {
+  width: 250px;
+  margin: 0 20px;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+article,
+aside {
+  background-color: #fff;
+  margin: 25px;
+  padding: 20px;
+}
+
+article {
+  float: left;
+  width: 500px;
+}
+
+aside {
+  width: 250px;
+  float: right;
+}
+
+/* footer {
+  text-align: center;
+  margin: 20px 0;
+} */
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.origo .about {
+  width: 700px;
+  margin: 60px auto;
+}
+
+.origo .about h3 {
+  font-size: 18px;
+}
+
+.origo .about > h3 {
+  text-align: center;
+}
+
+.origo .byline {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.origo .byline h3,
+.origo .byline p {
+  margin-left: 160px;
+}
+
+.origo .photo {
+  float: left;
+}
+
+.origo .photo img {
+  border-radius: 50%;
+  border: 10px solid #eee;
+  margin-top: 10px;
+}
+
+/* about cez position */
+.origo .position .photo {
+  float: none;
+}
+
+.origo .position.about {
+  position: relative;
+  height: 220px;
+}
+
+.origo .position .photo,
+.origo .position .inside {
+  position: absolute;
+  top: 46px;
+}
+
+.float-right .about {
+  width: 700px;
+  margin: 60px auto;
+}
+
+.float-right .about h3 {
+  font-size: 18px;
+}
+
+.float-right .about > h3 {
+  text-align: center;
+}
+
+.float-right .byline {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.float-right .photo {
+  width: 20%;
+  float: left;
+}
+
+.float-right .photo img {
+  border-radius: 50%;
+  border: 10px solid #eee;
+  margin-top: 10px;
+}
+
+/* about cez position */
+.float-right .position .photo {
+  float: none;
+}
+
+.float-right .position.about {
+  height: 220px;
+}
+
+.float-right .position .inside {
+  width: 70%;
+  float: right;
+  text-align: right;
+}
+
+.css-position .about {
+  width: 700px;
+  margin: 60px auto;
+}
+
+.css-position .about h3 {
+  font-size: 18px;
+}
+
+.css-position .about > h3 {
+  text-align: center;
+}
+
+.css-position .byline {
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+}
+
+.css-position .photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.css-position .photo img {
+  border-radius: 50%;
+  border: 10px solid #eee;
+  margin-top: 10px;
+}
+
+.css-position .inside {
+  position: absolute;
+  width: 75%;
+  top: 0;
+  right: 0;
+}
+
+.css-position .position.about {
+  height: 220px;
+}
+
+a {
+  color: #e53359;
+}
+
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+}

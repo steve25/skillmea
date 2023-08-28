@@ -1,0 +1,169 @@
+<!-- Hlavné je, aby ste:
+vytvorili stránku pozostávajúcu z headeru, footeru a hlavnej sekcie rozdelenej na články a sidebar
+použili float na vytvorenie layoutu, kde články sú na jednej strane a sidebar na druhej
+floatované elementy odizolovali od ostatných pomocou clearfix classu, čo sme si ukazovali (prípadne cez clear: both)
+Chcem, aby ste použili elementy <header>, <main>, <article>, <aside>, <footer>. V headeri zvykne byť logo a navigácia. Teraz bude stačiť logo. Logo môže byť aj obyčajný text. Vo footeri možno nejaký obkec, o čom stránka je. Alebo len © 2014. Čokoľvek.
+
+Do textu tiež môžete vložiť obrázok (alebo iný HTML element), okolo ktorého bude text obtekať. Čiže zasa float, ale bez clear. Pozor na to, že pri floatovaní vytrhávame element z normálneho toku dokumentu a preto mu musíme natvrdo zadať, ako široký ho chceme mať. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time for Web</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>Dopetrope</header>
+      <main class="group">
+        <article>
+          <h2>Rigth Sidebar</h2>
+          <h4>Lorem ipsum dolor sit amet</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            asperiores aspernatur voluptate sapiente non, doloremque officia
+            odit eius ratione libero ut corporis possimus rerum officiis debitis
+            adipisci. Neque, enim quis.
+          </p>
+          <img src="./img/01.jpg" class="image left" alt="first image" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+            obcaecati impedit nesciunt recusandae fugiat neque adipisci. Nam
+            voluptatibus odio ea porro ad vel illum maiores ullam error.
+            Tempore, minus velit! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Praesentium animi accusamus aliquid dolorum porro,
+            suscipit velit et consequatur. Nesciunt, illo harum. A veritatis et
+            debitis odio natus officiis iste ducimus.
+          </p>
+          <img src="./img/02.jpg" class="image right" alt="second image" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            obcaecati harum eveniet in maiores hic saepe quisquam numquam
+            expedita. Tenetur, voluptates. Accusantium, labore. Debitis facilis
+            at ullam nostrum qui totam! Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Sunt voluptatum nesciunt, similique amet magni
+            accusantium, perferendis alias, nemo aliquid aliquam quae tenetur
+            temporibus rem excepturi? Provident maxime possimus assumenda rerum!
+          </p>
+        </article>
+        <aside>
+          Aside Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+          accusantium sunt animi optio libero necessitatibus quos dolore eos
+          laudantium alias, vitae deserunt doloremque veniam fugit doloribus
+          quam. Corporis, fuga placeat.
+        </aside>
+        <aside>
+          Aside Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+          accusantium sunt animi optio libero necessitatibus quos dolore eos
+          laudantium alias, vitae deserunt doloremque veniam fugit doloribus
+          quam. Corporis, fuga placeat.
+        </aside>
+      </main>
+      <footer class="site-footer">
+        <!-- ORIGO -->
+        <div class="origo">
+          <div class="container about">
+            <h3>O autorovi</h3>
+            <div class="byline">
+              <a class="photo" href="#">
+                <img
+                  src="img/author.png"
+                  height="120"
+                  width="120"
+                  alt="Bolin - Legend of Korra"
+                />
+              </a>
+              <div class="inside">
+                <h3><a href="#">Admin Administratívny - origo</a></h3>
+                <div class="bio">
+                  <p>
+                    <strong>Bolin</strong> is an earthbender from a
+                    multicultural family. He grew up on the streets of
+                    <a href="#">Republic City</a> under the protection of his
+                    older brother, <strong>Mako</strong>, after their parents
+                    were murdered by a firebender. Eventually, he and his
+                    brother founded a pro-bending team, the
+                    <strong>Fire Ferrets</strong>, that would later include
+                    <a href="#">Avatar Korra</a>. After the Pro-bending
+                    Tournament ended, Bolin joined Team Avatar in an attempt to
+                    stop the Equalist organization.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FLOAT LEFT RIGHT -->
+        <div class="float-right">
+          <div class="container about position">
+            <h3>O autorovi</h3>
+            <div class="byline">
+              <a class="photo" href="#">
+                <img
+                  src="img/author.png"
+                  height="120"
+                  width="120"
+                  alt="Bolin - Legend of Korra"
+                />
+              </a>
+              <div class="inside">
+                <h3><a href="#">Admin Administratívny - float-right</a></h3>
+                <div class="bio">
+                  <p>
+                    <strong>Bolin</strong> is an earthbender from a
+                    multicultural family. He grew up on the streets of
+                    <a href="#">Republic City</a> under the protection of his
+                    older brother, <strong>Mako</strong>, after their parents
+                    were murdered by a firebender. Eventually, he and his
+                    brother founded a pro-bending team, the
+                    <strong>Fire Ferrets</strong>, that would later include
+                    <a href="#">Avatar Korra</a>. After the Pro-bending
+                    Tournament ended, Bolin joined Team Avatar in an attempt to
+                    stop the Equalist organization.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- POSITION -->
+        <div class="css-position">
+          <div class="container about position">
+            <h3>O autorovi</h3>
+            <div class="byline">
+              <a class="photo" href="#">
+                <img
+                  src="img/author.png"
+                  height="120"
+                  width="120"
+                  alt="Bolin - Legend of Korra"
+                />
+              </a>
+              <div class="inside">
+                <h3><a href="#">Admin Administratívny - position</a></h3>
+                <div class="bio">
+                  <p>
+                    <strong>Bolin</strong> is an earthbender from a
+                    multicultural family. He grew up on the streets of
+                    <a href="#">Republic City</a> under the protection of his
+                    older brother, <strong>Mako</strong>, after their parents
+                    were murdered by a firebender. Eventually, he and his
+                    brother founded a pro-bending team, the
+                    <strong>Fire Ferrets</strong>, that would later include
+                    <a href="#">Avatar Korra</a>. After the Pro-bending
+                    Tournament ended, Bolin joined Team Avatar in an attempt to
+                    stop the Equalist organization.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

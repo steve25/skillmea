@@ -1,0 +1,23 @@
+.image-grid {
+
+	margin-top: em(48);
+
+	img {
+		float: left;
+		width: 49%;
+		margin: .5%;
+
+		@include rounded(4px);
+
+		@media ( max-width: em(640) ) {
+			& {
+				float: none;
+				width: 100%;
+				margin: 0.5em 0;
+			}
+		}
+	}
+
+	@include clearfix;
+
+}

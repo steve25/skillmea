@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Click me, lick me</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <article>
+      <ul id="browser">
+        <!-- -->
+      </ul>
+      <ul id="user">
+        <!-- -->
+      </ul>
+    </article>
+
+    <script>
+      // ULOHA a;
+
+      // podla idcka najdeme zoznam, do ktoreho chceme pridat spravu
+      // vytvorime novy, cisty, panensky li element
+      // jeho text nastavime na 'message' a nalepime do zoznamu
+      function addMessage(elementId, message) {
+        var list = document.getElementById(elementId),
+          newItem = document.createElement("li");
+
+        newItem.textContent = message;
+        list.appendChild(newItem);
+      }
+
+      // ----------------------
+
+      // kedze moj javascript je na spodku stranky, vsetky html elementy uz prehliadac nacital
+      // beriem to tak, ze stranka je loadnuta
+      addMessage("browser", "open console pls :)");
+      addMessage("browser", "page loaded, bitch");
+
+      // po kliknuti na body pridame spravu do zoznamu
+      document.body.addEventListener("click", function (event) {
+        addMessage("user", "totally clicked it");
+      });
+
+      // ked drzim a - hybe sa stranka dolava
+      // ked drzim b - hybe sa stranka doprava
+
+      let keysPressed = {};
+
+      // document.addEventListener("keydown", (event) => {
+
+      // });
+
+      document.body.addEventListener("keypress", function (event) {
+        keysPressed[event.key] = true;
+
+        // vytiahnem si aktualnu hodnotu body { left: ?px }
+        var oldLeft = getComputedStyle(document.body).left,
+          newLeft;
+        var oldTop = getComputedStyle(document.body).top,
+          newTop;
+
+        // zrejme to bude nieco ako "10px"
+        // z toho potrebujem vytiahnut iba cisla na zaciatku, cize 10
+        oldLeft = parseInt(oldLeft, 10);
+        oldTop = parseInt(oldTop, 10);
+
+        // ak stlacim a, left znizim o 10
+        // ak stlacim d, left zvysim o 10
+        // ak stlacim w, top znizim o 10
+        // ak stlacim s, top zvysim o 10
+        // pre starsie prehliadace si pozri https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
+
+        // move element by direction
+        function move(direction) {
+          if (direction == "left") return (newLeft = oldLeft - 10);
+          if (direction == "right") return (newLeft = oldLeft + 10);
+          if (direction == "up") return (newTop = oldTop - 10);
+          if (direction == "down") return (newTop = oldTop + 10);
+        }
+
+        // move left
+        if (keysPressed["a"]) move("left");
+
+        // move right
+        if (keysPressed["d"]) move("right");
+
+        // move up
+        if (keysPressed["w"]) move("up");
+
+        // move down
+        if (keysPressed["s"]) move("down");
+
+        // move left and down
+        if (
+          (keysPressed["s"] && event.key == "a") ||
+          (keysPressed["a"] && event.key == "s")
+        ) {
+          move("left");
+          move("down");
+        }
+
+        // move left and up
+        if (
+          (keysPressed["w"] && event.key == "a") ||
+          (keysPressed["a"] && event.key == "w")
+        ) {
+          move("left");
+          move("up");
+        }
+
+        // move right and down
+        if (
+          (keysPressed["s"] && event.key == "d") ||
+          (keysPressed["d"] && event.key == "s")
+        ) {
+          move("right");
+          move("down");
+        }
+        // move right and up
+        if (
+          (keysPressed["w"] && event.key == "d") ||
+          (keysPressed["d"] && event.key == "w")
+        ) {
+          move("right");
+          move("up");
+        }
+
+        // do newLeft som vypocital aku novu left hodnotu by body element mal mat
+        // teraz mu ju este musim dat
+        document.body.style.left = newLeft + "px";
+        document.body.style.top = newTop + "px";
+      });
+
+      document.addEventListener("keyup", (event) => {
+        keysPressed[event.key] = false;
+      });
+
+      // pred zatvorenim okna sa zobrazi "naozaj to chces?" dialog
+      // window.addEventListener("beforeunload", function (event) {
+      //   addMessage("browser", "don't try to close me! dick!");
+      //   event.returnValue = ":(";
+      //   return ":(";
+      // });
+
+      // ULOHA b;
+
+      const largestNumber = (a, b) => {
+        console.log("uloha b: " + Math.max(a, b));
+      };
+
+      largestNumber(5, 8);
+
+      // ULOHA c;
+      const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+      const calculateSum = (arr) => {
+        console.log("uloha c: " + arr.reduce((a, b) => a + b));
+      };
+
+      calculateSum(arr);
+
+      // ULOHA d;
+      const otherValue = (arr) => {
+        console.log(
+          "uloha d: " + arr.filter((value, index) => index % 2 === 0)
+        );
+      };
+
+      otherValue(arr);
+
+      // ULOHA e;
+      const largestNumberInArray = (arr) => {
+        console.log("uloha e: " + Math.max(...arr));
+      };
+
+      largestNumberInArray(arr);
+    </script>
+  </body>
+</html>

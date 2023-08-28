@@ -1,0 +1,46 @@
+//
+//	VARIABLES
+// ------------------------------------------------------
+
+$font-size-base: 100%;
+$font-family-sans: Montserrat, sans-serif;
+$font-family-serif: "Big Caslon", Georgia, serif;
+
+$color-text: #fff;
+$color-muted: #777;
+$color-bg-body: #2f313c;
+$color-footer: #8c95ad;
+$color-sel: #fcbd24;
+
+$page-colors: (
+  "home" #8fd2d1 20,
+  "gallery" #ffd256 20,
+  "blog" #019dcd 20,
+  "contact" #fd685b 20,
+  "buttons" hotpink 20
+);
+
+$button-colors: (
+  "default": #545766,
+  "red": #fd685b,
+  "green": #39ae90,
+  "yellow": #fecd5e,
+  "white": #ffffff,
+);
+
+$alert-colors: (
+  "primary": #cce5ff,
+  "secondary": #e2e3e5,
+  "success": #d4edda,
+  "danger": #f8d7da,
+  "warning": #fff3cd,
+  "info": #d1ecf1,
+);
+
+$debug: false;
+$enable-rounded: true;
+$animation-speed: 0.25s;
+
+$width-sm: 400px;
+$width-md: 640px;
+$width-lg: 1024px;

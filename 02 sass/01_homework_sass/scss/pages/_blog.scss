@@ -1,0 +1,26 @@
+.post-list {
+
+	max-width: em(696);
+	margin: em(86) auto 0;
+	text-align: left;
+
+	.post {
+		margin: em(64) 0;
+		line-height: em(27);
+
+		p {
+			color: transparentize( $color-text, 0.1 );
+		}
+	}
+
+	.post-title {
+		font-size: em(30);
+		margin-bottom: em(34, 30);
+		text-transform: none;
+	}
+
+	.load-older {
+		margin-top: 0;
+	}
+
+}

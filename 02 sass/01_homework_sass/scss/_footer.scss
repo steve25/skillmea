@@ -1,0 +1,42 @@
+.pre-footer {
+	background: lighten($color-bg-body, 3%);
+	padding: em(68) 0 em(72);
+
+	p {
+		color: darken( $color-text, 10% );
+		font-size: em(18);
+		line-height: em(28, 18);
+		margin: em(28, 18) 0 em(30, 18);
+	}
+
+	.btn {
+		margin: 0;
+		font-size: 85%;
+	}
+
+	@media ( max-width: $width-md ) {
+		& {
+			font-size: 85%;
+			p br { display: none; }
+			padding: em(54) 0 em(64);
+		}
+	}
+}
+
+.site-footer {
+
+	padding: em(30) 0;
+	color: $color-footer;
+
+	a, span {
+		color: transparentize($color-footer, .5);
+	}
+
+	a {
+		border-bottom: 1px solid darken($color-footer, 30%);
+	}
+
+	span {
+		padding-left: em(16);
+	}
+}

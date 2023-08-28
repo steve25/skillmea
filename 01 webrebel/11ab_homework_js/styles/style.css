@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+}
+
+main {
+  margin: 3em auto;
+}
+
+ul {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 1.5em;
+  text-align: center;
+  background-color: chartreuse;
+  border: 3px solid rgb(97, 195, 0);
+}
+
+.oznaceny {
+  font-weight: bold;
+  color: red;
+}

@@ -1,0 +1,41 @@
+body {
+  min-width: 360px;
+  background-color: rgb(226, 224, 224);
+}
+
+.form-container {
+  width: fit-content;
+  background-color: burlywood;
+  padding: 1.5em;
+  margin: 0 auto;
+  border-radius: 2em;
+  border: 2px solid rgb(180, 148, 105);
+  font-size: 90%;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.3em 0;
+}
+
+.field label {
+  margin-right: 1em;
+}
+
+.field button {
+  margin: 1em auto;
+  border: 1px solid black;
+  border-radius: 0.4em;
+  padding: 0.6em 0.8em;
+}
+
+.errors-container ul {
+  line-height: 1.5em;
+  padding: 0;
+  margin: 0.7em;
+  list-style: none;
+  font-size: 95%;
+  color: red;
+}

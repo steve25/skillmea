@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    background-color: rgba(255, 202, 67, 0.253);
+}
+
+header {
+    background-color: rgb(37, 69, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 3px solid blue;
+    color:rgb(255, 219, 15);
+}
+
+.logo h2 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+    color: darkgray;
+}
+
+article {
+    max-width: 960px;
+    margin: 25px auto;
+    padding: 0 35px;
+}

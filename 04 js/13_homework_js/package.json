@@ -1,0 +1,44 @@
+{
+  "name": "dudes_app",
+  "version": "0.0.1",
+  "description": "very, very nice dudes app",
+  "main": "index.js",
+  "browserslist": [
+    "> 0.2% and not dead"
+  ],
+  "watch": {
+    "build": {
+      "patterns": "src",
+      "extensions": "js,css"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf assets/css/ & rimraf assets/js/",
+    "build:css": "sass src/css:assets/css",
+    "build:js": "babel ./src/js/main.js --out-file ./assets/js/bundle.js",
+    "build": "npm run build:css & npm run build:js",
+    "prebuild": "npm run clean",
+    "postbuild": "uglifyjs assets/js/bundle.js -o assets/js/bundle.js & uglifycss assets/css/main.css --output assets/css/main.css & npx postcss assets/css/*.css --use autoprefixer -d build/",
+    "watch": "npm-watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@types/uniq": "^0.0.27",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "rimraf": "^5.0.1",
+    "sass": "^1.64.2",
+    "uglify-js": "^3.17.4",
+    "uglifycss": "^0.0.29",
+    "uniq": "^1.0.1"
+  },
+  "dependencies": {
+    "npm-watch": "^0.11.0"
+  }
+}

@@ -1,0 +1,61 @@
+//
+//	GENERAL
+// ------------------------------------------------------
+
+// border-box
+html {
+  @include box-sizing(border-box);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@include selection {
+  background-color: $color-sel;
+  color: #fff;
+}
+
+body {
+  color: $color-text;
+  background: $color-bg-body;
+
+  font: {
+    size: $font-size-base;
+    family: $font-family-sans;
+    weight: normal;
+  }
+
+  text-align: center;
+  margin: 0;
+}
+
+.container {
+  @include container(em(1024));
+  padding: 0 em(16);
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+  transition: $animation-speed all ease-in-out;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.menu {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+
+  li,
+  a {
+    display: inline-block;
+  }
+}

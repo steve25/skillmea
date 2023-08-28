@@ -1,0 +1,22 @@
+%alert {
+  font: {
+    size: em(20);
+    family: $font-family-sans;
+  }
+
+  color: $color-text;
+  border: none;
+  margin: em(34, 17) 0;
+  padding: em(20, 17) em(24, 17);
+
+  @include rounded;
+}
+
+@each $alert, $color in $alert-colors {
+  .alert-#{$alert} {
+    @extend %alert;
+    color: darken($color, 60%);
+    border: 1px solid darken($color, 20%);
+    @include background-color($color, 1);
+  }
+}

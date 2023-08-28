@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  background-color: rgb(53, 53, 53);
+}
+
+.contact {
+  width: 980px;
+  margin: 0 auto;
+}
+
+form {
+  width: 50%;
+  float: left;
+}
+
+.name,
+.email,
+.message,
+.button {
+  margin: 15px;
+}
+
+input,
+textarea,
+button {
+  padding: 15px 20px;
+  border: none;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.red {
+  background-color: tomato;
+  color: white;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.plain {
+  background-color: rgb(53, 53, 53);
+  background-color: rgba(53, 53, 53, 0);
+  border: 1px solid lightslategrey;
+  color: white;
+}
+
+.name {
+  float: left;
+}
+
+.email {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.adress {
+  margin: 20px 0;
+  float: right;
+  width: 45%;
+  color: tomato;
+}
+
+.mailing-address {
+  width: 60%;
+  float: left;
+}
+
+h2 {
+  margin: 0;
+}
+
+h2::before {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+  background-color: dimgray;
+
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  background-position: center center;
+}
+
+.mailing-address h2::before {
+  background-image: url("../img/home.svg");
+}
+
+.social {
+  width: 40%;
+  float: right;
+}
+
+.social h2::before {
+  background-image: url("../img/icons8-chat-bubble-50.png");
+}
+
+.email-adress {
+  width: 60%;
+  float: left;
+}
+
+.email-adress h2::before {
+  background-image: url("../img/icons8-mail-50.png");
+}
+
+.phone {
+  width: 40%;
+  float: right;
+}
+
+.phone h2::before {
+  background-image: url("../img/icons8-phone-50.png");
+}
+
+.container {
+  margin-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: azure;
+}
+
+ul {
+  margin: 15px 0 0 25px;
+}
+
+li {
+  list-style: none;
+  color: azure;
+}
+
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+}
+
+.line {
+  padding-top: 40px;
+  border-top: 1px solid dimgray;
+}

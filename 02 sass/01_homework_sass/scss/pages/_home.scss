@@ -1,0 +1,10 @@
+.bigass {
+	margin-top: 2.75em;
+	@if ( $enable-rounded ) {
+		border-radius: em(12) em(12) 0 0;
+	}
+}
+
+.home .content {
+	padding-bottom: 0;
+}

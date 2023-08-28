@@ -1,0 +1,33 @@
+body {
+  background-color: rgb(236, 229, 168);
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+ul {
+  margin: 1rem auto;
+}
+
+li {
+  display: inline-block;
+  padding: 0 0.6rem;
+}
+
+a {
+  color: darkmagenta;
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+  font-weight: 700;
+}
+
+img {
+  margin: 0.6rem;
+  border: 2px solid black;
+}

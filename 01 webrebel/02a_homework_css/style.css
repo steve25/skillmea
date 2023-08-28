@@ -1,0 +1,98 @@
+html,
+body {
+  margin: 0 auto;
+  background-color: rgb(223, 223, 223);
+}
+
+main {
+  width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  font-family: "Roboto", sans-serif;
+}
+
+.img-container {
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.name h1 {
+  width: fit-content;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 3px;
+  background-color: black;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.role h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.description p {
+  text-align: center;
+  font-style: italic;
+}
+
+section {
+  margin: 60px 0;
+}
+
+h2 {
+  margin: 35px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.content {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.bottom_40 {
+  margin-bottom: 40px;
+}
+
+.bottom_10 {
+  margin-bottom: 10px;
+}
+
+.bottom_20 {
+  margin-bottom: 20px;
+}
+
+a {
+  color: rgb(60, 60, 60);
+  text-decoration: none;
+}
+
+a:hover {
+  color: dimgray;
+  text-decoration: underline;
+}
+
+.experience {
+  margin-bottom: 40px;
+}

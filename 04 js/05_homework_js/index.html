@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uloha 05</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque suscipit
+      sapiente autem provident laudantium quos fugit reprehenderit nobis eos
+      harum excepturi similique incidunt impedit ab, debitis repudiandae ipsa
+      sint veniam. Dolore doloremque fugiat, ipsam odit distinctio nulla ut
+      accusamus qui, dolores deleniti alias eaque reiciendis, illo ea
+      perspiciatis consequatur in ad enim quasi expedita. Consequuntur amet
+      iusto maiores modi delectus? Quasi, molestiae odit nam asperiores rem
+      maxime doloremque expedita nesciunt velit dolor quisquam inventore, at
+      iusto assumenda minus exercitationem, et in itaque nisi? Voluptatibus,
+      amet magni earum vitae voluptatem sunt. Mollitia obcaecati eligendi quidem
+      quod, veritatis voluptatum vitae saepe quam molestias quasi, odio aliquid
+      laborum dolor officiis reiciendis impedit aspernatur atque doloribus unde
+      odit laboriosam. Incidunt deleniti doloremque necessitatibus dignissimos.
+      Commodi atque inventore nisi non cum animi quia est laudantium dolor!
+      Veniam explicabo esse quae, harum, incidunt, ipsa sapiente at doloribus a
+      dolore quidem! Eum quas iste voluptates delectus? Aperiam. Aperiam maiores
+      expedita ducimus? Repudiandae excepturi, ea enim quaerat autem alias unde
+      iusto at aliquid? Culpa unde exercitationem sequi. Odio expedita magnam,
+      perferendis eligendi id harum hic esse eum dolore. Vitae est fugit
+      veritatis nesciunt. Neque aliquam animi explicabo, libero reiciendis,
+      minus suscipit a quod sequi ab vero atque voluptate corporis velit ut,
+      eveniet doloremque voluptas mollitia ipsam blanditiis rem. Laudantium
+      consequuntur voluptatibus molestias doloribus praesentium modi sit velit
+      iusto amet omnis veritatis, suscipit vero voluptas consectetur id rerum
+      corrupti excepturi aut placeat, recusandae consequatur. Fugit ab vel
+      obcaecati repudiandae! Asperiores natus aperiam tempora reiciendis
+      laudantium labore enim, nihil nam exercitationem dolor quaerat optio velit
+      repellat dolores? Quidem inventore nulla eum accusamus quis fugit cumque,
+      molestiae aperiam delectus harum enim! Vitae possimus optio modi nihil
+      voluptate ipsam, quos autem repellat unde debitis. Fugiat enim dolorem
+      corrupti, esse amet quod, sequi eaque error, ea sint atque a nihil vitae?
+      Saepe, est.
+    </p>
+    <script>
+      // ULOHA a
+
+      const a = 0.1;
+      const b = 0.212;
+
+      const countDecimalPlaces = (number) => {
+        const decimals = String(number).split(".");
+        return decimals[1] ? decimals[1].length : 0;
+      };
+
+      const countDecimals = (a, b) => {
+        const decimals = Math.max(countDecimalPlaces(a), countDecimalPlaces(b));
+        let result = a + b;
+        if (result > Math.floor(result)) {
+          result = parseFloat(result).toFixed(decimals);
+        }
+        console.log("uloha a1: " + result);
+      };
+
+      const countMultipleDecimals = (...arguments) => {
+        decimalArr = [];
+        for (let number = 0; number < arguments.length; number++) {
+          decimalArr.push(countDecimalPlaces(arguments[number]));
+        }
+
+        const decimals = Math.max(...decimalArr);
+
+        let result = arguments.reduce((a, b) => a + b);
+
+        if (result > Math.floor(result)) {
+          result = parseFloat(result).toFixed(decimals);
+        }
+
+        console.log("uloha a2: " + result);
+      };
+
+      countDecimals(a, b);
+
+      countMultipleDecimals(1, 2.2, 3, 0.1);
+
+      // ULOHA b
+
+      const string = "123px456em789dž";
+      const result = string.replace(/\D/g, "");
+      console.log(result);
+
+      // ULOHA c
+
+      const selectHtmlText = () => {
+        console.log(document.getSelection().toString());
+      };
+
+      document.body.addEventListener("click", () => {
+        selectHtmlText();
+      });
+    </script>
+  </body>
+</html>

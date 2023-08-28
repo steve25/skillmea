@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domáca úloha 02</title>
+    <style>
+      body {
+        margin: 0 auto;
+        background-color: plum;
+      }
+
+      main {
+        text-align: center;
+        margin: 2rem;
+        font-weight: 900;
+        font-size: 2rem;
+      }
+
+      .button {
+        width: fit-content;
+
+        background-color: aliceblue;
+        margin: 2rem auto;
+        padding: 1rem;
+        cursor: pointer;
+        border: 0.6rem solid purple;
+        border-radius: 1.3rem;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      #print {
+        margin: auto;
+        padding: 1.5rem;
+        border: 0.6rem solid greenyellow;
+        border-radius: 1.3rem;
+        width: fit-content;
+        background-color: rgb(199, 199, 199);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="button" onclick="greeting('Pišta')">Great Me</div>
+      <div class="button" onclick="calc()">Pod počítať</div>
+      <div class="button" onclick="handleShopping()">Pod nakúpiť</div>
+      <div id="print" class="hide"></div>
+    </main>
+
+    <script>
+      const print = document.getElementById("print");
+      let timeOut = null;
+
+      // uloha a;
+      console.log("Ahoj majster");
+      console.log(3 + 13);
+
+      // uloha b;
+      const greeting = (name) => {
+        if (typeof timeOut === "number") cancel();
+
+        print.classList.remove("hide");
+        print.innerHTML = "Hello " + name;
+        timeOut = setTimeout(() => {
+          print.classList.add("hide");
+        }, 3000);
+      };
+
+      // uloha c; & d;
+      const calc = () => {
+        if (typeof timeOut === "number") cancel();
+
+        const a = +prompt("Zadaj 1. číslo");
+        const b = +prompt("Zadaj 2. číslo");
+
+        const result = makeResult(a, b);
+
+        print.classList.remove("hide");
+        print.innerHTML = result;
+
+        timeOut = setTimeout(() => {
+          print.classList.add("hide");
+        }, 3000);
+      };
+
+      const makeResult = (a, b) => {
+        return a + b;
+      };
+
+      // uloha e
+      const productCount = 5;
+      const productPrice = 300;
+
+      const handleShopping = () => {
+        howMuch(productCount, productPrice);
+      };
+
+      const howMuch = (count, price) => {
+        if (typeof timeOut === "number") cancel();
+        const result = count * price;
+        print.classList.remove("hide");
+        print.innerHTML =
+          "Kúpil si " + count + " vecí za " + result + "€ dokopy";
+
+        timeOut = setTimeout(() => {
+          print.classList.add("hide");
+        }, 3000);
+      };
+
+      const cancel = () => {
+        console.log(timeOut);
+        clearTimeout(timeOut);
+      };
+    </script>
+  </body>
+</html>

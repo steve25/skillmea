@@ -1,0 +1,48 @@
+.contact-form {
+	max-width: em(560);
+	margin: em(72) auto 0;
+	text-align: left;
+
+	label {
+		font-size: em(17);
+		display: block;
+		margin-bottom: em(22);
+	}
+
+	.btn {
+		font-size: 85%;
+		margin-top: 0;
+		padding: {
+			left: 2.5em;
+			right: 2.5em;
+		}
+	}
+}
+
+input,
+textarea {
+	color: $color-text;
+
+	font: {
+		size:   em(14);
+		family: $font-family-sans;
+		weight: normal;
+	}
+
+	border: 2px solid rgba( black, 0.1 );
+	background-color: rgba( white, 0.05 );
+	outline: none;
+
+	padding: em(10);
+	margin-top: em(6);
+
+	display: block;
+	max-width: 100%;
+	width: 100%;
+
+	@include rounded( em(5) );
+
+	&:focus {
+		border-color: rgba( white, 0.5 );
+	}
+}

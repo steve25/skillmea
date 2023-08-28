@@ -1,0 +1,70 @@
+{
+  "items" : [{
+    "album_type" : "album",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/1D6DMPbawTW5sInEESyCDN"
+    },
+    "id" : "1D6DMPbawTW5sInEESyCDN",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/0e9946674fe2e1d47ec7f5c0847a79a9f7ecca0d",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/02763e480f06f867be2881795395ba6baa093fa3",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/58a0df73a2e6cc174f6330c0649fbdf519f61d86",
+      "width" : 64
+    } ],
+    "year" : 2013,
+    "name" : "Pobiť Sa/Utiecť",
+    "type" : "album"
+  }, {
+    "album_type" : "album",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/4brtZb4ejI2xXLJkYbtmlw"
+    },
+    "id" : "4brtZb4ejI2xXLJkYbtmlw",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/94af87e76bc1d83f86b0d257b696dfc8bc3080ea",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/d2d6739eb32c3545c852addcde78416475f12415",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/347d5d0c183298f0199db7cc5304e185d1f285f7",
+      "width" : 64
+    } ],
+    "year" : 2009,
+    "name" : "Slnko je vo veži",
+    "type" : "album"
+  }, {
+    "album_type" : "album",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/24pwG3cp1iKN94I2MJYcIF"
+    },
+    "id" : "24pwG3cp1iKN94I2MJYcIF",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/359525ac2adf9d1c8eb76d39d2d62e7bd772b1ad",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ea9c2ff73cd4a13f6e7e6f7f0d72c0b7002de4b2",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/0491902b8bd503f1a563b7cdb8b8edf3a5790beb",
+      "width" : 64
+    } ],
+    "year" : 2006,
+    "name" : "Vrany sa vracajú",
+    "type" : "album"
+  } ],
+  "total" : 3
+}

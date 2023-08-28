@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+article {
+  width: 1060px;
+  margin: auto;
+}
+
+section {
+  width: 300px;
+  float: left;
+  background-color: whitesmoke;
+  margin: 10px;
+  border: 1px solid dimgray;
+}
+
+section p {
+  margin: 30px;
+  text-align: justify;
+}
+
+section img {
+  width: 250px;
+  display: block;
+  margin: 20px auto;
+}
+
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+}

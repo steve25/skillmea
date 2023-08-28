@@ -1,0 +1,26 @@
+//
+//	CONTENT
+// ------------------------------------------------------
+
+.content {
+	padding: {
+		top: em(80);
+		bottom: em(80);
+	}
+}
+
+@media ( max-width: $width-md ) {
+
+	main {
+		font-size: 85%;
+		h2 br { display: none; }
+	}
+
+	.content {
+		padding: {
+			top: em(60);
+			bottom: em(60);
+		}
+	}
+
+}
